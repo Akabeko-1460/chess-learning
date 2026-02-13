@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9FAFB;
+  --foreground: #2D3748;
 }
 
 @theme inline {
@@ -10,17 +10,37 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-serif: var(--font-noto-serif-jp);
+  --color-navy: #1A365D;
+  --color-navy-light: #2C5282;
+  --color-accent-green: #48BB78;
+  --color-light-gray: #E2E8F0;
+  --color-text-primary: #2D3748;
+  --color-text-secondary: #718096;
+  --color-light-blue-bg: #EBF8FF;
+  --color-light-blue-text: #2B6CB0;
+  --color-muted: #A0AEC0;
+  --color-border: #E2E8F0;
+  --color-surface: #F7FAFC;
+  --color-card-hover-border: #BEE3F8;
+  --color-icon-blue: #90CDF4;
+  --color-board-light: #E2E8F0;
+  --color-board-dark: #4A5568;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
