@@ -20,7 +20,7 @@ export default function HeroSection() {
             href="/tutorial"
             className="rounded-md bg-navy px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-navy-light"
           >
-            無料で始める
+            学習をはじめる
           </Link>
           <Link
             href="/play"
@@ -34,14 +34,22 @@ export default function HeroSection() {
       <div className="relative mt-16 flex h-[500px] w-full items-center justify-center md:mt-0 md:w-[50%]">
         {/* Abstract chess board */}
         <div className="grid h-[350px] w-[350px] grid-cols-4 grid-rows-4 overflow-hidden rounded-[20px] bg-white shadow-[20px_20px_60px_rgba(0,0,0,0.1)] [transform:rotate(-15deg)_skewX(10deg)] md:h-[500px] md:w-[500px]">
-          <div className="bg-light-gray" /><div className="bg-navy-light" /><div className="bg-light-gray" /><div className="bg-navy-light" />
+          <div className="bg-light-gray" />
+          <div className="bg-navy-light" />
+          <div className="bg-light-gray" />
+          <div className="bg-navy-light" />
           <div className="bg-navy-light" />
           <div className="relative bg-navy">
             <i className="ri-chess-king-fill absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl text-white/90 md:text-[80px]" />
           </div>
-          <div className="bg-navy-light" /><div className="bg-light-gray" />
-          <div className="bg-light-gray" /><div className="bg-navy-light" /><div className="bg-light-gray" /><div className="bg-navy-light" />
-          <div className="bg-navy-light" /><div className="bg-light-gray" />
+          <div className="bg-navy-light" />
+          <div className="bg-light-gray" />
+          <div className="bg-light-gray" />
+          <div className="bg-navy-light" />
+          <div className="bg-light-gray" />
+          <div className="bg-navy-light" />
+          <div className="bg-navy-light" />
+          <div className="bg-light-gray" />
           <div className="relative bg-navy">
             <i className="ri-chess-knight-fill absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl text-white/90 md:text-[80px]" />
           </div>
