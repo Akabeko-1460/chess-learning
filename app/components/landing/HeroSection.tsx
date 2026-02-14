@@ -13,7 +13,7 @@ export default function HeroSection() {
           ステップバイステップで学ぼう
         </h1>
         <p className="mb-10 max-w-[80%] text-xl text-text-secondary">
-          インタラクティブなレッスンで、ルール、オープニング、戦略を楽しく学べます。
+          インタラクティブなレッスンでルール、戦略を楽しく学べます。
         </p>
         <div className="flex flex-wrap gap-5">
           <Link
