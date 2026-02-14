@@ -1,8 +1,8 @@
 const features = [
   {
     icon: "ri-robot-2-line",
-    title: "AI対戦",
-    description: "4段階の難易度調整可能なAIエンジンと対戦できます。",
+    title: "CPU対戦",
+    description: "4段階の難易度調整が可能なコンピューターと対戦できます。",
   },
   {
     icon: "ri-brain-line",

@@ -8,7 +8,10 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 flex h-[90px] w-full items-center justify-between bg-white px-6 shadow-[0_2px_15px_rgba(0,0,0,0.03)] md:px-[100px]">
-      <Link href="/" className="flex items-center gap-2.5 font-serif text-[32px] text-navy">
+      <Link
+        href="/"
+        className="flex items-center gap-2.5 font-serif text-[32px] text-navy"
+      >
         <i className="ri-chess-fill text-[36px]" />
         ChessLearn
       </Link>
@@ -48,13 +51,6 @@ export default function Header() {
           プレイ
         </Link>
       </nav>
-
-      <Link
-        href="/tutorial"
-        className="hidden rounded-md bg-navy px-7 py-3 text-base font-medium text-white transition-colors hover:bg-navy-light md:inline-block"
-      >
-        学習を始める
-      </Link>
     </header>
   );
 }

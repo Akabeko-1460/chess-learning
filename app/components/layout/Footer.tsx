@@ -16,25 +16,53 @@ export default function Footer() {
           <div>
             <h5 className="mb-5 text-lg font-bold text-text-primary">学ぶ</h5>
             <ul className="space-y-3">
-              <li><Link href="/tutorial/rules" className="text-text-secondary transition-colors hover:text-navy">基本ルール</Link></li>
-              <li><Link href="/tutorial/openings" className="text-text-secondary transition-colors hover:text-navy">オープニング</Link></li>
-              <li><Link href="/tutorial/strategy" className="text-text-secondary transition-colors hover:text-navy">戦略</Link></li>
+              <li>
+                <Link
+                  href="/tutorial/rules"
+                  className="text-text-secondary transition-colors hover:text-navy"
+                >
+                  基本ルール
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tutorial/openings"
+                  className="text-text-secondary transition-colors hover:text-navy"
+                >
+                  オープニング
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tutorial/strategy"
+                  className="text-text-secondary transition-colors hover:text-navy"
+                >
+                  戦略
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
             <h5 className="mb-5 text-lg font-bold text-text-primary">プレイ</h5>
             <ul className="space-y-3">
-              <li><Link href="/play/cpu" className="text-text-secondary transition-colors hover:text-navy">CPU対戦</Link></li>
-              <li><Link href="/play/local" className="text-text-secondary transition-colors hover:text-navy">ローカル対人戦</Link></li>
+              <li>
+                <Link
+                  href="/play/cpu"
+                  className="text-text-secondary transition-colors hover:text-navy"
+                >
+                  CPU対戦
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/play/local"
+                  className="text-text-secondary transition-colors hover:text-navy"
+                >
+                  ローカル対人戦
+                </Link>
+              </li>
             </ul>
           </div>
-        </div>
-      </div>
-      <div className="flex flex-col items-center justify-between gap-4 border-t border-border pt-10 text-sm text-muted md:flex-row">
-        <p>&copy; 2025 ChessLearn. All rights reserved.</p>
-        <div className="flex gap-5">
-          <span className="text-xl text-text-secondary"><i className="ri-twitter-x-line" /></span>
-          <span className="text-xl text-text-secondary"><i className="ri-github-fill" /></span>
         </div>
       </div>
     </footer>

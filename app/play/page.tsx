@@ -5,7 +5,7 @@ const modes = [
     href: "/play/cpu",
     icon: "ri-robot-2-line",
     title: "CPU対戦",
-    description: "AIエンジンと対戦します。4段階の難易度から選べます。",
+    description: "コンピューターと対戦します。4段階の難易度から選べます。",
   },
   {
     href: "/play/local",

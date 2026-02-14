@@ -5,7 +5,6 @@ export interface LessonStep {
   fen: string;
   highlights?: Record<string, React.CSSProperties>;
   arrows?: [Square, Square][];
-  expectedMove?: { from: Square; to: Square };
 }
 
 export interface Lesson {

@@ -58,11 +58,6 @@ export const rulesModule: TutorialModule = {
           },
           arrows: [["e4", "d5"], ["e4", "f5"]],
         },
-        {
-          instruction: "e4のポーンでd5のポーンを取ってみましょう。",
-          fen: "7k/8/8/3p1p2/4P3/8/8/4K3 w - - 0 1",
-          expectedMove: { from: "e4", to: "d5" },
-        },
       ],
     },
     {
@@ -92,11 +87,6 @@ export const rulesModule: TutorialModule = {
           },
           arrows: [["d4", "d8"], ["d4", "d1"], ["d4", "a4"], ["d4", "h4"]],
         },
-        {
-          instruction: "ルークをd4からd8に動かしてみましょう。",
-          fen: "8/7k/8/8/3R4/8/8/4K3 w - - 0 1",
-          expectedMove: { from: "d4", to: "d8" },
-        },
       ],
     },
     {
@@ -108,11 +98,6 @@ export const rulesModule: TutorialModule = {
           instruction: "ビショップ（角行）は斜めに何マスでも動けます。d4のビショップの動ける範囲を確認しましょう。4つの対角線方向に移動できます。",
           fen: "6k1/8/8/8/3B4/8/8/4K3 w - - 0 1",
           arrows: [["d4", "a7"], ["d4", "h8"], ["d4", "a1"], ["d4", "g1"]],
-        },
-        {
-          instruction: "ビショップをd4からg7に動かしてみましょう。",
-          fen: "6k1/8/8/8/3B4/8/8/4K3 w - - 0 1",
-          expectedMove: { from: "d4", to: "g7" },
         },
       ],
     },
@@ -135,11 +120,6 @@ export const rulesModule: TutorialModule = {
             b3: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
             b5: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
           },
-        },
-        {
-          instruction: "ナイトをd4からf5に動かしてみましょう。",
-          fen: "7k/8/8/8/3N4/8/8/4K3 w - - 0 1",
-          expectedMove: { from: "d4", to: "f5" },
         },
       ],
     },
@@ -195,11 +175,6 @@ export const rulesModule: TutorialModule = {
           },
           arrows: [["b4", "e1"]],
         },
-        {
-          instruction: "チェックの回避方法は3つ：①キングを逃がす ②駒で攻撃元を取る ③駒でブロックする。キングをd1に逃がしましょう。",
-          fen: "7k/8/8/8/1b6/8/8/4K3 w - - 0 1",
-          expectedMove: { from: "e1", to: "d1" },
-        },
       ],
     },
     {
@@ -212,11 +187,6 @@ export const rulesModule: TutorialModule = {
           fen: "6k1/5ppp/8/8/8/8/8/R3K3 w - - 0 1",
           arrows: [["a1", "a8"]],
         },
-        {
-          instruction: "ルークをa8に動かしてチェックメイトを完成させましょう！",
-          fen: "6k1/5ppp/8/8/8/8/8/R3K3 w - - 0 1",
-          expectedMove: { from: "a1", to: "a8" },
-        },
       ],
     },
     {
@@ -228,11 +198,6 @@ export const rulesModule: TutorialModule = {
           instruction: "キャスリングはキングとルークを同時に動かす特殊な手です。キングを2マス横に動かし、ルークがキングを飛び越えます。",
           fen: "r3k2r/pppppppp/8/8/8/8/PPPPPPPP/R3K2R w KQkq - 0 1",
           arrows: [["e1", "g1"]],
-        },
-        {
-          instruction: "キングサイドキャスリング：キングをe1からg1に動かしましょう。ルークが自動的にf1に移動します。",
-          fen: "r3k2r/pppppppp/8/8/8/8/PPPPPPPP/R3K2R w KQkq - 0 1",
-          expectedMove: { from: "e1", to: "g1" },
         },
       ],
     },

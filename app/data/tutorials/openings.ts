@@ -12,17 +12,8 @@ export const openingsModule: TutorialModule = {
       description: "序盤の基本的な考え方を学びます。",
       steps: [
         {
-          instruction: "オープニングの3つの原則：①中央を支配する ②駒を展開する ③キングの安全を確保する",
+          instruction: "オープニングの3つの原則：\n①中央を支配する\n②駒を展開する\n③キングの安全を確保する",
           fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        },
-        {
-          instruction: "まず中央のポーンを進めましょう。e4は最も人気のある初手の一つです。e2のポーンをe4に動かしましょう。",
-          fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-          expectedMove: { from: "e2", to: "e4" },
-          highlights: {
-            e4: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
-            d4: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
-          },
         },
       ],
     },

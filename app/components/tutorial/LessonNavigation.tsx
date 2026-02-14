@@ -7,7 +7,7 @@ interface LessonNavigationProps {
   onNext: () => void;
   hasPrev: boolean;
   hasNext: boolean;
-  backHref: string;
+  nextLessonHref?: string;
 }
 
 export default function LessonNavigation({
@@ -15,7 +15,7 @@ export default function LessonNavigation({
   onNext,
   hasPrev,
   hasNext,
-  backHref,
+  nextLessonHref,
 }: LessonNavigationProps) {
   return (
     <div className="flex items-center justify-between">
@@ -35,12 +35,14 @@ export default function LessonNavigation({
           次へ <i className="ri-arrow-right-line" />
         </button>
       </div>
-      <Link
-        href={backHref}
-        className="flex items-center gap-1 text-sm text-text-secondary transition-colors hover:text-navy"
-      >
-        <i className="ri-arrow-go-back-line" /> 一覧に戻る
-      </Link>
+      {nextLessonHref && (
+        <Link
+          href={nextLessonHref}
+          className="flex items-center gap-1 rounded-md bg-accent-green px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-green/80"
+        >
+          次のレッスン <i className="ri-arrow-right-s-line" />
+        </Link>
+      )}
     </div>
   );
 }
