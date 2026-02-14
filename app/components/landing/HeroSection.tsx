@@ -59,11 +59,11 @@ export default function HeroSection() {
         {/* Floating cards */}
         <div className="absolute top-[20%] right-[5%] flex items-center gap-4 rounded-xl bg-white p-5 shadow-[0_10px_30px_rgba(0,0,0,0.1)] animate-[float_6s_ease-in-out_infinite]">
           <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-light-blue-bg text-2xl text-light-blue-text">
-            <i className="ri-trophy-line" />
+            <i className="ri-book-open-line" />
           </div>
           <div>
-            <h4 className="text-base font-bold">デイリーパズル</h4>
-            <span className="text-xs text-text-secondary">毎日更新</span>
+            <h4 className="text-base font-bold">体系的な学習</h4>
+            <span className="text-xs text-text-secondary">26レッスン収録</span>
           </div>
         </div>
 
@@ -72,7 +72,7 @@ export default function HeroSection() {
             <i className="ri-user-star-line" />
           </div>
           <div>
-            <h4 className="text-base font-bold">AI対戦</h4>
+            <h4 className="text-base font-bold">CPU対戦</h4>
             <span className="text-xs text-text-secondary">4段階の難易度</span>
           </div>
         </div>

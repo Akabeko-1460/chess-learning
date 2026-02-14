@@ -3,31 +3,36 @@
 import type { LessonStep } from "@/app/data/tutorials/types";
 
 interface LessonContentProps {
-  step: LessonStep;
+  steps: LessonStep[];
   stepIndex: number;
-  totalSteps: number;
 }
 
-export default function LessonContent({ step, stepIndex, totalSteps }: LessonContentProps) {
+export default function LessonContent({ steps, stepIndex }: LessonContentProps) {
   return (
     <div className="rounded-lg bg-white p-6 shadow-sm">
-      <div className="mb-3 flex items-center justify-between text-sm text-text-secondary">
+      <div className="mb-3 text-sm text-text-secondary">
         <span>
-          ステップ {stepIndex + 1} / {totalSteps}
+          ステップ {stepIndex + 1} / {steps.length}
         </span>
-        {step.expectedMove && (
-          <span className="flex items-center gap-1 text-navy">
-            <i className="ri-drag-move-2-line" /> 駒を動かしてみよう
-          </span>
-        )}
       </div>
       <div className="mb-4 h-1.5 w-full overflow-hidden rounded-full bg-[#EDF2F7]">
         <div
           className="h-full rounded-full bg-accent-green transition-all duration-300"
-          style={{ width: `${((stepIndex + 1) / totalSteps) * 100}%` }}
+          style={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
         />
       </div>
-      <p className="text-lg leading-relaxed text-text-primary">{step.instruction}</p>
+      <div className="grid">
+        {steps.map((s, i) => (
+          <p
+            key={i}
+            className={`whitespace-pre-line text-lg leading-relaxed text-text-primary [grid-area:1/1] ${
+              i === stepIndex ? "visible" : "invisible"
+            }`}
+          >
+            {s.instruction}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }

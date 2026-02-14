@@ -10,7 +10,7 @@ export function useStockfish() {
   const resolveRef = useRef<((bestMove: string) => void) | null>(null);
 
   useEffect(() => {
-    const worker = new Worker("/stockfish/stockfish.js");
+    const worker = new Worker("/stockfish/stockfish.js#/stockfish/stockfish.wasm");
     workerRef.current = worker;
 
     worker.onmessage = (e: MessageEvent) => {

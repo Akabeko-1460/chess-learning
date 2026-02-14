@@ -40,11 +40,6 @@ export const strategyModule: TutorialModule = {
             d5: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
           },
         },
-        {
-          instruction: "e4に駒を進めて中央の支配を始めましょう。",
-          fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-          expectedMove: { from: "e2", to: "e4" },
-        },
       ],
     },
     {

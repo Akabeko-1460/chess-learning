@@ -35,17 +35,13 @@ export default function LessonNavigation({
           次へ <i className="ri-arrow-right-line" />
         </button>
       </div>
-      {nextLessonHref ? (
+      {nextLessonHref && (
         <Link
           href={nextLessonHref}
           className="flex items-center gap-1 rounded-md bg-accent-green px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-green/80"
         >
           次のレッスン <i className="ri-arrow-right-s-line" />
         </Link>
-      ) : (
-        <span className="flex cursor-not-allowed items-center gap-1 rounded-md bg-accent-green px-4 py-2 text-sm font-medium text-white opacity-40">
-          次のレッスン <i className="ri-arrow-right-s-line" />
-        </span>
       )}
     </div>
   );

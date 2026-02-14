@@ -41,18 +41,12 @@ export default function StrategyLessonPage({
           <InteractiveBoard
             key={`${lessonSlug}-${stepIndex}`}
             step={step}
-            onCorrectMove={() => {
-              if (stepIndex < lesson.steps.length - 1) {
-                setStepIndex(stepIndex + 1);
-              }
-            }}
           />
         </div>
         <div className="flex w-full flex-col gap-4 lg:w-96">
           <LessonContent
-            step={step}
+            steps={lesson.steps}
             stepIndex={stepIndex}
-            totalSteps={lesson.steps.length}
           />
           <LessonNavigation
             onPrev={() => setStepIndex(Math.max(0, stepIndex - 1))}

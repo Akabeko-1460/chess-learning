@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const features = [
   "リアルタイム合法手ハイライト",
-  "4段階のAI難易度調整",
+  "4段階のCPU難易度調整",
   "ローカル対人戦モード",
   "棋譜の確認",
 ];
@@ -23,7 +23,7 @@ export default function PracticePreview() {
           インタラクティブな練習
         </h2>
         <p className="mb-10 text-lg text-board-dark">
-          理論だけでは不十分です。AIエンジンと対戦したり、友達と対局して、リアルタイムで上達しましょう。
+          理論だけでは不十分です。コンピューターと対戦したり、友達と対局して、リアルタイムで上達しましょう。
         </p>
         <ul className="space-y-5">
           {features.map((f) => (
