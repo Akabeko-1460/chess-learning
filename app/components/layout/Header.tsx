@@ -13,7 +13,7 @@ export default function Header() {
         className="flex items-center gap-2.5 font-serif text-[32px] text-navy"
       >
         <i className="ri-chess-fill text-[36px]" />
-        ChessLearn
+        Chess Learning
       </Link>
 
       <button

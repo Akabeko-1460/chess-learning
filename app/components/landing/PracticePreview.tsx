@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const features = [
-  "リアルタイム合法手ハイライト",
+  "合法手ハイライト機能",
   "4段階のCPU難易度調整",
   "ローカル対人戦モード",
-  "棋譜の確認",
+  "棋譜確認機能",
 ];
 
 export default function PracticePreview() {
@@ -27,7 +27,10 @@ export default function PracticePreview() {
         </p>
         <ul className="space-y-5">
           {features.map((f) => (
-            <li key={f} className="flex items-center gap-4 text-lg text-text-primary">
+            <li
+              key={f}
+              className="flex items-center gap-4 text-lg text-text-primary"
+            >
               <i className="ri-checkbox-circle-fill text-2xl text-accent-green" />
               {f}
             </li>
@@ -46,12 +49,22 @@ export default function PracticePreview() {
 
 /* Static 8x8 board for the landing page */
 const pieces: Record<string, string> = {
-  "0,0": "ri-chess-rook-fill", "0,1": "ri-chess-knight-fill", "0,2": "ri-chess-bishop-fill",
-  "0,3": "ri-chess-queen-fill", "0,4": "ri-chess-king-fill", "0,5": "ri-chess-bishop-fill",
-  "0,6": "ri-chess-knight-fill", "0,7": "ri-chess-rook-fill",
-  "7,0": "ri-chess-rook-line", "7,1": "ri-chess-knight-line", "7,2": "ri-chess-bishop-line",
-  "7,3": "ri-chess-queen-line", "7,4": "ri-chess-king-line", "7,5": "ri-chess-bishop-line",
-  "7,6": "ri-chess-knight-line", "7,7": "ri-chess-rook-line",
+  "0,0": "ri-chess-rook-fill",
+  "0,1": "ri-chess-knight-fill",
+  "0,2": "ri-chess-bishop-fill",
+  "0,3": "ri-chess-queen-fill",
+  "0,4": "ri-chess-king-fill",
+  "0,5": "ri-chess-bishop-fill",
+  "0,6": "ri-chess-knight-fill",
+  "0,7": "ri-chess-rook-fill",
+  "7,0": "ri-chess-rook-line",
+  "7,1": "ri-chess-knight-line",
+  "7,2": "ri-chess-bishop-line",
+  "7,3": "ri-chess-queen-line",
+  "7,4": "ri-chess-king-line",
+  "7,5": "ri-chess-bishop-line",
+  "7,6": "ri-chess-knight-line",
+  "7,7": "ri-chess-rook-line",
 };
 for (let c = 0; c < 8; c++) {
   pieces[`1,${c}`] = "ri-chess-pawn-fill";
@@ -73,11 +86,13 @@ function renderBoard() {
         <div
           key={key}
           className={`relative flex items-center justify-center text-[clamp(24px,4vw,40px)] ${
-            isLight ? "bg-board-light text-text-primary" : "bg-board-dark text-light-gray"
+            isLight
+              ? "bg-board-light text-text-primary"
+              : "bg-board-dark text-light-gray"
           } ${isHighlight ? "after:absolute after:h-5 after:w-5 after:rounded-full after:bg-accent-green/60 after:content-['']" : ""}`}
         >
           {piece && <i className={`${piece} ${isBlack ? "" : ""}`} />}
-        </div>
+        </div>,
       );
     }
   }

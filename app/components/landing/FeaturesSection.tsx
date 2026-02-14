@@ -2,7 +2,7 @@ const features = [
   {
     icon: "ri-robot-2-line",
     title: "CPU対戦",
-    description: "4段階の難易度調整が可能なコンピューターと対戦できます。",
+    description: "4段階の難易度調整が可能CPUと対戦できます。",
   },
   {
     icon: "ri-brain-line",
@@ -38,9 +38,13 @@ export default function FeaturesSection() {
             key={f.title}
             className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm transition-transform hover:-translate-y-1 hover:bg-white/10"
           >
-            <i className={`${f.icon} mb-5 inline-block text-[40px] text-icon-blue`} />
+            <i
+              className={`${f.icon} mb-5 inline-block text-[40px] text-icon-blue`}
+            />
             <h4 className="mb-3 text-xl font-bold">{f.title}</h4>
-            <p className="text-[15px] leading-relaxed text-[#CBD5E0]">{f.description}</p>
+            <p className="text-[15px] leading-relaxed text-[#CBD5E0]">
+              {f.description}
+            </p>
           </div>
         ))}
       </div>
