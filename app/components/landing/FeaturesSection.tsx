@@ -29,7 +29,7 @@ export default function FeaturesSection() {
           ChessLearnの特徴
         </h2>
         <p className="text-[#CBD5E0]">
-          初心者からの上達に必要なすべてが揃っています。
+          初心者の上達に必要なすべてが揃っています。
         </p>
       </div>
       <div className="mt-15 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">

@@ -139,7 +139,7 @@ export default function LocalPlayPage() {
   return (
     <div className="min-h-screen bg-surface px-4 py-10 md:px-[60px]">
       <h1 className="mb-8 text-center font-serif text-3xl text-navy md:text-4xl">ローカル対人戦</h1>
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 lg:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 lg:flex-row lg:pl-[280px]">
         <div className="w-full lg:w-auto">
           <ChessBoard
             position={game.fen()}
