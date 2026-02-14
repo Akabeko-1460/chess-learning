@@ -10,10 +10,10 @@ export default function HeroSection() {
         <h1 className="mb-6 font-serif text-5xl leading-tight text-navy md:text-7xl md:leading-[1.1]">
           チェスを
           <br />
-          ステップバイステップで
+          ステップバイステップで学ぼう
         </h1>
         <p className="mb-10 max-w-[80%] text-xl text-text-secondary">
-          戦略的な思考力を解放しよう。インタラクティブなレッスンで、ルール、オープニング、戦略を楽しく学べます。
+          インタラクティブなレッスンで、ルール、オープニング、戦略を楽しく学べます。
         </p>
         <div className="flex flex-wrap gap-5">
           <Link
