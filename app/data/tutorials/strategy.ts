@@ -48,15 +48,21 @@ export const strategyModule: TutorialModule = {
       description: "一手で2つ以上の駒を攻撃する技を学びます。",
       steps: [
         {
-          instruction: "フォークとは、一つの駒で複数の相手駒を同時に攻撃することです。特にナイトのフォークは強力です。",
-          fen: "r1bqk2r/pppppppp/8/8/3nN3/8/PPPPPPPP/R1BQKB1R w KQkq - 0 1",
+          instruction: "フォークとは、一つの駒で複数の相手駒を同時に攻撃することです。特にナイトのフォークは強力です。d5のナイトに注目しましょう。",
+          fen: "r1bqkb1r/pppp1ppp/2n2n2/3Np3/2B1P3/5N2/PPPP1PPP/R1BQK2R w KQkq - 4 4",
+          highlights: {
+            d5: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+          },
         },
         {
-          instruction: "ナイトをc6に動かすとキングとクイーンの両方を攻撃できます！これがナイトフォークです。",
-          fen: "r1bqk2r/pppp1ppp/8/4p3/8/8/PPPPPPPP/RNBQKB1R w KQkq - 0 1",
+          instruction: "ナイトがc7に跳ぶとチェックになり、同時にa8のルークも攻撃しています！キングはチェック回避が最優先なので、その後ナイトでルークを取れます。",
+          fen: "r1bqkb1r/ppNp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/R1BQK2R b KQkq - 5 4",
           highlights: {
-            d4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            c7: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            e8: { backgroundColor: "rgba(255, 0, 0, 0.3)" },
+            a8: { backgroundColor: "rgba(255, 0, 0, 0.3)" },
           },
+          arrows: [["c7", "e8"], ["c7", "a8"]],
         },
       ],
     },
@@ -90,15 +96,21 @@ export const strategyModule: TutorialModule = {
       description: "駒を動かすことで隠れた攻撃を発見する技を学びます。",
       steps: [
         {
-          instruction: "ディスカバードアタックとは、駒を動かすことで、その背後にある駒の攻撃ラインを開く戦術です。",
-          fen: "rnbqk2r/pppp1ppp/5n2/4N3/1b2P3/8/PPPP1PPP/RNBQKB1R w KQkq - 2 4",
+          instruction: "ディスカバードアタックとは、駒を動かすことで、その背後にある駒の攻撃ラインを開く戦術です。d5のナイトとc4のビショップに注目しましょう。",
+          fen: "r1bqkb1r/pppp1ppp/2n2n2/3Np3/2B1P3/8/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+          highlights: {
+            d5: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            c4: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+          },
         },
         {
-          instruction: "この局面で白のナイトがe5から動くと、背後のクイーンやビショップの攻撃ラインが開きます。移動先でも別の駒を攻撃できます。",
-          fen: "rnbqk2r/pppp1ppp/5n2/4N3/1b2P3/8/PPPP1PPP/RNBQKB1R w KQkq - 2 4",
+          instruction: "ナイトがd5から動くと、c4のビショップがf7を直接攻撃します。ナイトの移動先でも別の駒を攻撃できれば、一手で二つの脅威を作れます。",
+          fen: "r1bqkb1r/pppp1ppp/2n2n2/3Np3/2B1P3/8/PPPP1PPP/RNBQK2R w KQkq - 4 4",
           highlights: {
-            e5: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            d5: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            f7: { backgroundColor: "rgba(255, 0, 0, 0.3)" },
           },
+          arrows: [["c4", "f7"]],
         },
       ],
     },

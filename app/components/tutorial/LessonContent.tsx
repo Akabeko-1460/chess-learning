@@ -21,18 +21,9 @@ export default function LessonContent({ steps, stepIndex }: LessonContentProps) 
           style={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
         />
       </div>
-      <div className="grid">
-        {steps.map((s, i) => (
-          <p
-            key={i}
-            className={`whitespace-pre-line text-lg leading-relaxed text-text-primary [grid-area:1/1] ${
-              i === stepIndex ? "visible" : "invisible"
-            }`}
-          >
-            {s.instruction}
-          </p>
-        ))}
-      </div>
+      <p className="whitespace-pre-line text-lg leading-relaxed text-text-primary">
+        {steps[stepIndex].instruction}
+      </p>
     </div>
   );
 }

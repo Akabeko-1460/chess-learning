@@ -66,7 +66,7 @@ export const rulesModule: TutorialModule = {
       description: "ルークの縦横移動を学びます。",
       steps: [
         {
-          instruction: "ルーク（飛車）は縦横に何マスでも動けます。d4のルークの動ける範囲を確認しましょう。",
+          instruction: "ルークは縦横に何マスでも動けます。d4のルークの動ける範囲を確認しましょう。",
           fen: "7k/8/8/8/3R4/8/8/4K3 w - - 0 1",
           highlights: {
             d4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
@@ -95,7 +95,7 @@ export const rulesModule: TutorialModule = {
       description: "ビショップの斜め移動を学びます。",
       steps: [
         {
-          instruction: "ビショップ（角行）は斜めに何マスでも動けます。d4のビショップの動ける範囲を確認しましょう。4つの対角線方向に移動できます。",
+          instruction: "ビショップは斜めに何マスでも動けます。d4のビショップの動ける範囲を確認しましょう。4つの対角線方向に移動できます。",
           fen: "6k1/8/8/8/3B4/8/8/4K3 w - - 0 1",
           arrows: [["d4", "a7"], ["d4", "h8"], ["d4", "a1"], ["d4", "g1"]],
         },
@@ -107,7 +107,7 @@ export const rulesModule: TutorialModule = {
       description: "ナイトのL字型移動を学びます。",
       steps: [
         {
-          instruction: "ナイト（桂馬）はL字型に動きます。2マス直進+1マス横、または1マス直進+2マス横です。他の駒を飛び越えられる唯一の駒です。",
+          instruction: "ナイトはL字型に動きます。2マス直進+1マス横、または1マス直進+2マス横です。他の駒を飛び越えられる唯一の駒です。",
           fen: "7k/8/8/8/3N4/8/8/4K3 w - - 0 1",
           highlights: {
             d4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
