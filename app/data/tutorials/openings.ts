@@ -15,6 +15,27 @@ export const openingsModule: TutorialModule = {
           instruction: "オープニングの3つの原則：\n①中央を支配する\n②駒を展開する\n③キングの安全を確保する",
           fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
         },
+        {
+          instruction: "①中央を支配する：e4とd4にポーンを進め、中央の4マスをコントロールしましょう。中央を支配すると駒の活動範囲が広がります。",
+          fen: "rnbqkbnr/pppppppp/8/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2",
+          highlights: {
+            e4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            d4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            e5: { backgroundColor: "rgba(72, 187, 120, 0.2)" },
+            d5: { backgroundColor: "rgba(72, 187, 120, 0.2)" },
+          },
+        },
+        {
+          instruction: "②③駒を展開し、キングの安全を確保する：ナイトとビショップを展開した後、キャスリングでキングを安全な位置に移動させましょう。これが理想的な序盤の完成形です。",
+          fen: "r1bq1rk1/ppppbppp/2n2n2/4p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 b - - 0 5",
+          highlights: {
+            g1: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            f1: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            f3: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            c4: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+          },
+          arrows: [["e1", "g1"]],
+        },
       ],
     },
     {
@@ -83,12 +104,12 @@ export const openingsModule: TutorialModule = {
       steps: [
         {
           instruction: "クイーンズギャンビットは1.d4 d5 2.c4で始まります。白はc4のポーンを犠牲にして中央の支配を狙います。",
-          fen: "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq c3 0 2",
+          fen: "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2",
           arrows: [["c4", "d5"]],
         },
         {
           instruction: "黒がdxc4と取ると「クイーンズギャンビットアクセプテッド」、取らないと「デクラインド」と呼ばれます。",
-          fen: "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq c3 0 2",
+          fen: "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2",
           highlights: {
             c4: { backgroundColor: "rgba(255, 0, 0, 0.3)" },
             d5: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
@@ -124,6 +145,14 @@ export const openingsModule: TutorialModule = {
             g7: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
             g6: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
           },
+        },
+        {
+          instruction: "g7のビショップの配置を「フィアンケット」と呼びます。ビショップはg7からa1への長い対角線を支配し、中央と相手のクイーンサイドに強い影響力を持ちます。",
+          fen: "rnbqk2r/ppppppbp/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 3",
+          highlights: {
+            g7: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+          },
+          arrows: [["g7", "a1"]],
         },
       ],
     },

@@ -21,7 +21,10 @@ export default function LessonContent({ steps, stepIndex }: LessonContentProps) 
           style={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
         />
       </div>
-      <p className="whitespace-pre-line text-lg leading-relaxed text-text-primary">
+      <p
+        key={stepIndex}
+        className="whitespace-pre-line text-lg leading-relaxed text-text-primary animate-[fade-in_0.4s_ease-out]"
+      >
         {steps[stepIndex].instruction}
       </p>
     </div>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ChessBoard from "@/app/components/chess/ChessBoard";
+import { useScrollFadeIn } from "@/app/lib/useScrollFadeIn";
 
 const RUY_LOPEZ_FEN =
   "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3";
@@ -14,10 +15,22 @@ const features = [
 ];
 
 export default function PracticePreview() {
+  const { ref, isVisible } = useScrollFadeIn();
+
   return (
-    <section className="flex flex-col items-center gap-16 bg-surface px-6 py-[100px] md:flex-row md:px-[80px]">
+    <section
+      ref={ref}
+      className="flex flex-col items-center gap-16 bg-surface px-6 py-[100px] md:flex-row md:px-[80px]"
+    >
       {/* Chess board preview */}
-      <div className="flex w-full justify-center rounded-[20px] bg-white p-6 shadow-[0_10px_40px_rgba(0,0,0,0.05)] md:w-[60%]">
+      <div
+        className="flex w-full justify-center rounded-[20px] bg-white p-6 shadow-[0_10px_40px_rgba(0,0,0,0.05)] md:w-[60%]"
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? "translateX(0)" : "translateX(-20px)",
+          transition: "opacity 0.7s ease-out, transform 0.7s ease-out",
+        }}
+      >
         <ChessBoard
           position={RUY_LOPEZ_FEN}
           arePiecesDraggable={false}
@@ -26,7 +39,14 @@ export default function PracticePreview() {
       </div>
 
       {/* Content */}
-      <div className="w-full md:w-[45%]">
+      <div
+        className="w-full md:w-[45%]"
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? "translateX(0)" : "translateX(20px)",
+          transition: "opacity 0.7s ease-out 0.2s, transform 0.7s ease-out 0.2s",
+        }}
+      >
         <h2 className="mb-5 font-serif text-4xl text-navy md:text-[48px]">
           インタラクティブな練習
         </h2>

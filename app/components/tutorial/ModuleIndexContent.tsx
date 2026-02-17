@@ -37,6 +37,10 @@ export default function ModuleIndexContent({
             key={lesson.slug}
             href={`/tutorial/${categorySlug}/${lesson.slug}`}
             className="group flex items-center gap-4 rounded-xl border border-border bg-white p-5 transition-all hover:border-card-hover-border hover:shadow-md"
+            style={{
+              opacity: 0,
+              animation: `fade-in-up 0.5s ease-out ${0.1 + i * 0.08}s forwards`,
+            }}
           >
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EDF2F7] text-sm font-bold text-navy-light group-hover:bg-navy-light group-hover:text-white">
               {i + 1}

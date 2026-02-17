@@ -9,7 +9,7 @@ interface InteractiveBoardProps {
 
 export default function InteractiveBoard({ step }: InteractiveBoardProps) {
   return (
-    <div>
+    <div className="animate-[fade-in_0.4s_ease-out]">
       <ChessBoard
         position={step.fen}
         arePiecesDraggable={false}

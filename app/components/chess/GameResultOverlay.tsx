@@ -48,8 +48,8 @@ export default function GameResultOverlay({ game, onNewGame }: GameResultOverlay
   const { icon, message, color } = getResult(game);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 animate-in fade-in duration-300">
-      <div className="rounded-xl bg-white p-8 shadow-2xl text-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 animate-[fade-in_0.2s_ease-out]">
+      <div className="rounded-xl bg-white p-8 shadow-2xl text-center animate-[scale-in_0.3s_ease-out]">
         <i className={`${icon} text-6xl ${color} mb-4 block`} />
         <p className="whitespace-pre-line text-xl font-bold text-navy mb-6">{message}</p>
         <button

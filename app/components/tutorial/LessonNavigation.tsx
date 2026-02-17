@@ -38,7 +38,7 @@ export default function LessonNavigation({
       {nextLessonHref && (
         <Link
           href={nextLessonHref}
-          className="flex items-center gap-1 rounded-md bg-accent-green px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-green/80"
+          className="flex items-center gap-1 rounded-md bg-accent-green px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-green/80 animate-[fade-in_0.5s_ease-out]"
         >
           次のレッスン <i className="ri-arrow-right-s-line" />
         </Link>

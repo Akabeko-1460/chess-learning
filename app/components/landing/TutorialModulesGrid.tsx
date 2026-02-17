@@ -6,6 +6,7 @@ import { rulesModule } from "@/app/data/tutorials/rules";
 import { openingsModule } from "@/app/data/tutorials/openings";
 import { strategyModule } from "@/app/data/tutorials/strategy";
 import { getCompletedLessons } from "@/app/lib/progress";
+import { useScrollFadeIn } from "@/app/lib/useScrollFadeIn";
 import type { TutorialModule } from "@/app/data/tutorials/types";
 
 const modules: { data: TutorialModule; href: string }[] = [
@@ -18,6 +19,7 @@ export default function TutorialModulesGrid() {
   const [completedMap, setCompletedMap] = useState<Record<string, string[]>>(
     {},
   );
+  const { ref, isVisible } = useScrollFadeIn();
 
   useEffect(() => {
     const map: Record<string, string[]> = {};
@@ -28,8 +30,10 @@ export default function TutorialModulesGrid() {
   }, []);
 
   return (
-    <section className="bg-white px-6 py-[100px] md:px-[100px]">
-      <div className="mb-20 text-center">
+    <section ref={ref} className="bg-white px-6 py-[100px] md:px-[100px]">
+      <div
+        className={`mb-20 text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+      >
         <h2 className="mb-4 font-serif text-4xl text-navy md:text-[48px]">
           体系的な学習パス
         </h2>
@@ -39,7 +43,7 @@ export default function TutorialModulesGrid() {
       </div>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-        {modules.map((mod) => {
+        {modules.map((mod, i) => {
           const total = mod.data.lessons.length;
           const completed = (completedMap[mod.data.id] ?? []).length;
           const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
@@ -55,6 +59,11 @@ export default function TutorialModulesGrid() {
               key={mod.data.id}
               href={mod.href}
               className="group rounded-2xl border border-border bg-white px-8 py-10 transition-all duration-400 hover:-translate-y-2.5 hover:border-card-hover-border hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]"
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? "translateY(0)" : "translateY(24px)",
+                transition: `opacity 0.6s ease-out ${0.2 + i * 0.15}s, transform 0.6s ease-out ${0.2 + i * 0.15}s`,
+              }}
             >
               <div className="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-xl bg-[#EDF2F7] text-[32px] text-navy-light transition-colors group-hover:bg-navy-light group-hover:text-white">
                 <i className={mod.data.icon} />
