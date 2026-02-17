@@ -12,11 +12,13 @@ export const rulesModule: TutorialModule = {
       description: "チェスボードの正しい配置方法を学びます。",
       steps: [
         {
-          instruction: "チェスボードは8×8の64マスで構成されています。白は下側、黒は上側に配置します。これが初期配置です。",
+          instruction:
+            "チェスボードは8×8の64マスで構成されています。白は下側、黒は上側に配置します。これが初期配置です。",
           fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
         },
         {
-          instruction: "白のキングはe1（右から4番目）に配置されます。黒のキングはe8に配置されます。",
+          instruction:
+            "白のキングはe1（右から4番目）に配置されます。黒のキングはe8に配置されます。",
           fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
           highlights: {
             e1: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
@@ -24,7 +26,8 @@ export const rulesModule: TutorialModule = {
           },
         },
         {
-          instruction: "クイーンは自分の色のマスに配置します。白のクイーンはd1（白マス）、黒のクイーンはd8（黒マス）です。",
+          instruction:
+            "クイーンは自分の色のマスに配置します。白のクイーンはd1（白マス）、黒のクイーンはd8（黒マス）です。",
           fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
           highlights: {
             d1: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
@@ -39,24 +42,32 @@ export const rulesModule: TutorialModule = {
       description: "ポーンの前進、初手2マス、斜め取りを学びます。",
       steps: [
         {
-          instruction: "ポーンは前方に1マス進めます。初期位置からは2マス進めることもできます。e2のポーンを見てみましょう。",
+          instruction:
+            "ポーンは前方に1マス進めます。初期位置からは2マス進めることもできます。e2のポーンを見てみましょう。",
           fen: "7k/8/8/8/8/8/4P3/4K3 w - - 0 1",
           highlights: {
             e2: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
             e3: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
             e4: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
           },
-          arrows: [["e2", "e3"], ["e2", "e4"]],
+          arrows: [
+            ["e2", "e3"],
+            ["e2", "e4"],
+          ],
         },
         {
-          instruction: "ポーンは斜め前方の駒を取ることができます。e4のポーンはd5またはf5の駒を取れます。",
+          instruction:
+            "ポーンは斜め前方の駒を取ることができます。e4のポーンはd5またはf5の駒を取れます。",
           fen: "7k/8/8/3p1p2/4P3/8/8/4K3 w - - 0 1",
           highlights: {
             e4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
             d5: { backgroundColor: "rgba(255, 0, 0, 0.3)" },
             f5: { backgroundColor: "rgba(255, 0, 0, 0.3)" },
           },
-          arrows: [["e4", "d5"], ["e4", "f5"]],
+          arrows: [
+            ["e4", "d5"],
+            ["e4", "f5"],
+          ],
         },
       ],
     },
@@ -66,7 +77,8 @@ export const rulesModule: TutorialModule = {
       description: "ルークの縦横移動を学びます。",
       steps: [
         {
-          instruction: "ルークは縦横に何マスでも動けます。d4のルークの動ける範囲を確認しましょう。",
+          instruction:
+            "ルークは縦横に何マスでも動けます。d4のルークの動ける範囲を確認しましょう。",
           fen: "7k/8/8/8/3R4/8/8/4K3 w - - 0 1",
           highlights: {
             d4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
@@ -85,7 +97,12 @@ export const rulesModule: TutorialModule = {
             g4: { backgroundColor: "rgba(72, 187, 120, 0.2)" },
             h4: { backgroundColor: "rgba(72, 187, 120, 0.2)" },
           },
-          arrows: [["d4", "d8"], ["d4", "d1"], ["d4", "a4"], ["d4", "h4"]],
+          arrows: [
+            ["d4", "d8"],
+            ["d4", "d1"],
+            ["d4", "a4"],
+            ["d4", "h4"],
+          ],
         },
       ],
     },
@@ -95,9 +112,15 @@ export const rulesModule: TutorialModule = {
       description: "ビショップの斜め移動を学びます。",
       steps: [
         {
-          instruction: "ビショップは斜めに何マスでも動けます。d4のビショップの動ける範囲を確認しましょう。4つの対角線方向に移動できます。",
+          instruction:
+            "ビショップは斜めに何マスでも動けます。d4のビショップの動ける範囲を確認しましょう。4つの対角線方向に移動できます。",
           fen: "6k1/8/8/8/3B4/8/8/4K3 w - - 0 1",
-          arrows: [["d4", "a7"], ["d4", "h8"], ["d4", "a1"], ["d4", "g1"]],
+          arrows: [
+            ["d4", "a7"],
+            ["d4", "h8"],
+            ["d4", "a1"],
+            ["d4", "g1"],
+          ],
         },
       ],
     },
@@ -107,7 +130,8 @@ export const rulesModule: TutorialModule = {
       description: "ナイトのL字型移動を学びます。",
       steps: [
         {
-          instruction: "ナイトはL字型に動きます。2マス直進+1マス横、または1マス直進+2マス横です。他の駒を飛び越えられる唯一の駒です。",
+          instruction:
+            "ナイトはL字型に動きます。2マス直進+1マス横、または1マス直進+2マス横です。他の駒を飛び越えられる唯一の駒です。",
           fen: "7k/8/8/8/3N4/8/8/4K3 w - - 0 1",
           highlights: {
             d4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
@@ -129,13 +153,18 @@ export const rulesModule: TutorialModule = {
       description: "クイーンの縦横斜め移動を学びます。",
       steps: [
         {
-          instruction: "クイーンはルークとビショップを合わせた動きができます。縦横斜めの8方向に何マスでも動けます。最も強力な駒です。",
+          instruction:
+            "クイーンはルークとビショップを合わせた動きができます。縦横斜めの8方向に何マスでも動けます。最も強力な駒です。",
           fen: "6k1/8/8/8/3Q4/8/8/7K w - - 0 1",
           arrows: [
-            ["d4", "d8"], ["d4", "d1"],
-            ["d4", "h4"], ["d4", "a4"],
-            ["d4", "h8"], ["d4", "a7"],
-            ["d4", "g1"], ["d4", "a1"],
+            ["d4", "d8"],
+            ["d4", "d1"],
+            ["d4", "h4"],
+            ["d4", "a4"],
+            ["d4", "h8"],
+            ["d4", "a7"],
+            ["d4", "g1"],
+            ["d4", "a1"],
           ],
         },
       ],
@@ -146,7 +175,8 @@ export const rulesModule: TutorialModule = {
       description: "キングの移動と制約を学びます。",
       steps: [
         {
-          instruction: "キングは全方向に1マスだけ動けます。キングが取られるとゲーム終了なので、最も大切な駒です。",
+          instruction:
+            "キングは全方向に1マスだけ動けます。キングが取られるとゲーム終了なので、最も大切な駒です。",
           fen: "7k/8/8/8/3K4/8/8/8 w - - 0 1",
           highlights: {
             d4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
@@ -160,6 +190,23 @@ export const rulesModule: TutorialModule = {
             e3: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
           },
         },
+        {
+          instruction:
+            "キングは相手の駒が利いているマスには移動できません。a4のルークが4列目を横に支配しているため、キングはc4やe4には移動できません。",
+          fen: "7k/8/8/8/r2K4/8/8/8 w - - 0 1",
+          highlights: {
+            d4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            c5: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            d5: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            e5: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            c3: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            d3: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            e3: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            c4: { backgroundColor: "rgba(255, 0, 0, 0.4)" },
+            e4: { backgroundColor: "rgba(255, 0, 0, 0.4)" },
+          },
+          arrows: [["a4", "h4"]],
+        },
       ],
     },
     {
@@ -168,12 +215,31 @@ export const rulesModule: TutorialModule = {
       description: "チェック（王手）の概念を学びます。",
       steps: [
         {
-          instruction: "キングが相手の駒に攻撃されている状態を「チェック」と言います。チェックされたら必ず回避しなければなりません。b4のビショップがe1のキングをチェックしています。",
+          instruction:
+            "キングが相手の駒に攻撃されている状態を「チェック」と言います。チェックされたら必ず回避しなければなりません。b4のビショップがe1のキングをチェックしています。",
           fen: "7k/8/8/8/1b6/8/8/4K3 w - - 0 1",
           highlights: {
             e1: { backgroundColor: "rgba(255, 0, 0, 0.4)" },
           },
           arrows: [["b4", "e1"]],
+        },
+        {
+          instruction:
+            "チェック回避には3つの方法があります：\n①キングを逃がす（d1/d2/f1/f2へ）\n②駒でブロックする（ナイトをc3やd2へ）\n③チェックしている駒を取る\n必ずいずれかで回避しなければなりません。",
+          fen: "7k/8/8/8/1b6/8/8/1N2K3 w - - 0 1",
+          highlights: {
+            e1: { backgroundColor: "rgba(255, 0, 0, 0.4)" },
+            d1: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            d2: { backgroundColor: "rgba(100, 149, 237, 0.3)" },
+            f1: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            f2: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+            c3: { backgroundColor: "rgba(100, 149, 237, 0.4)" },
+            b1: { backgroundColor: "rgba(100, 149, 237, 0.3)" },
+          },
+          arrows: [
+            ["b4", "e1"],
+            ["b1", "c3"],
+          ],
         },
       ],
     },
@@ -183,9 +249,22 @@ export const rulesModule: TutorialModule = {
       description: "チェックメイトの条件を学びます。",
       steps: [
         {
-          instruction: "チェックメイトとは、チェックを回避する手段がない状態です。これでゲーム終了、チェックメイトした側の勝ちです。ルークをa8に動かすと黒キングは逃げ場がなくなります。",
+          instruction:
+            "チェックメイトとは、チェックを回避する手段がない状態です。これでゲーム終了、チェックメイトした側の勝ちです。ルークをa8に動かすと黒キングは逃げ場がなくなります。",
           fen: "6k1/5ppp/8/8/8/8/8/R3K3 w - - 0 1",
           arrows: [["a1", "a8"]],
+        },
+        {
+          instruction:
+            "Ra8#の後の局面です。ルークが8列目全体を支配し、キングは8列目から逃げられません。f7/g7/h7のポーンが自分のキングの退路を塞いでいるため、チェックメイトが成立します。",
+          fen: "R5k1/5ppp/8/8/8/8/8/4K3 w - - 1 1",
+          highlights: {
+            a8: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
+            g8: { backgroundColor: "rgba(255, 0, 0, 0.4)" },
+            f7: { backgroundColor: "rgba(255, 165, 0, 0.3)" },
+            g7: { backgroundColor: "rgba(255, 165, 0, 0.3)" },
+            h7: { backgroundColor: "rgba(255, 165, 0, 0.3)" },
+          },
         },
       ],
     },
@@ -195,9 +274,29 @@ export const rulesModule: TutorialModule = {
       description: "キャスリングの条件とやり方を学びます。",
       steps: [
         {
-          instruction: "キャスリングはキングとルークを同時に動かす特殊な手です。キングを2マス横に動かし、ルークがキングを飛び越えます。",
+          instruction:
+            "キャスリングはキングとルークを同時に動かす特殊な手です。キングを2マス横に動かし、ルークがキングを飛び越えます。",
           fen: "r3k2r/pppppppp/8/8/8/8/PPPPPPPP/R3K2R w KQkq - 0 1",
           arrows: [["e1", "g1"]],
+        },
+        {
+          instruction:
+            "クイーンサイドにもキャスリングできます。キングがe1からc1へ移動し、a1のルークがd1に移動します。",
+          fen: "r3k2r/pppppppp/8/8/8/8/PPPPPPPP/R3K2R w KQkq - 0 1",
+          arrows: [
+            ["e1", "c1"],
+            ["a1", "d1"],
+          ],
+        },
+        {
+          instruction:
+            "キャスリングには4つの条件があります：\n①キングとルークが一度も動いていない\n②キングとルークの間に駒がない\n③キングがチェックされていない\n④キングの通過マスが攻撃されていない\n下の局面ではf3のナイトがe1をチェックしているためキャスリングできません。",
+          fen: "r3k2r/pppppppp/8/8/8/5n2/PPPPPPPP/R3K2R w KQkq - 0 1",
+          highlights: {
+            e1: { backgroundColor: "rgba(255, 0, 0, 0.4)" },
+            f3: { backgroundColor: "rgba(255, 0, 0, 0.3)" },
+          },
+          arrows: [["f3", "e1"]],
         },
       ],
     },
@@ -207,12 +306,23 @@ export const rulesModule: TutorialModule = {
       description: "アンパッサン（通過捕獲）を学びます。",
       steps: [
         {
-          instruction: "アンパッサンは特殊なポーン取りです。相手のポーンが初期位置から2マス進んだ直後、隣にいる自分のポーンで斜めに取れます。",
+          instruction:
+            "アンパッサンは特殊なポーン取りです。相手のポーンが初期位置から2マス進んだ直後、隣にいる自分のポーンで斜めに取れます。",
           fen: "4K3/8/8/8/4Pp2/8/8/7k b - e3 0 1",
           arrows: [["f4", "e3"]],
           highlights: {
             e4: { backgroundColor: "rgba(255, 0, 0, 0.3)" },
             e3: { backgroundColor: "rgba(72, 187, 120, 0.3)" },
+          },
+        },
+        {
+          instruction:
+            "アンパッサンは相手がポーンを2マス進めた直後の1手だけ可能です。次のターンで別の手を指すと、アンパッサンの権利は失われます。チャンスを逃さないようにしましょう。",
+          fen: "4K3/8/8/8/4Pp2/8/8/7k b - e3 0 1",
+          highlights: {
+            e3: { backgroundColor: "rgba(255, 165, 0, 0.4)" },
+            e4: { backgroundColor: "rgba(255, 0, 0, 0.3)" },
+            f4: { backgroundColor: "rgba(72, 187, 120, 0.5)" },
           },
         },
       ],
@@ -223,7 +333,8 @@ export const rulesModule: TutorialModule = {
       description: "ポーンの昇格を学びます。",
       steps: [
         {
-          instruction: "ポーンが相手側の最後の列に到達すると、クイーン、ルーク、ビショップ、ナイトのいずれかに昇格できます。通常はクイーンを選びます。",
+          instruction:
+            "ポーンが相手側の最後の列に到達すると、クイーン、ルーク、ビショップ、ナイトのいずれかに昇格できます。通常はクイーンを選びます。",
           fen: "7k/4P3/8/8/8/8/8/4K3 w - - 0 1",
           arrows: [["e7", "e8"]],
           highlights: {

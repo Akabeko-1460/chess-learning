@@ -1,3 +1,7 @@
+"use client";
+
+import { useScrollFadeIn } from "@/app/lib/useScrollFadeIn";
+
 const features = [
   {
     icon: "ri-robot-2-line",
@@ -22,9 +26,13 @@ const features = [
 ];
 
 export default function FeaturesSection() {
+  const { ref, isVisible } = useScrollFadeIn();
+
   return (
-    <section className="bg-navy px-6 py-[100px] text-white md:px-[100px]">
-      <div className="mb-5 text-center">
+    <section ref={ref} className="bg-navy px-6 py-[100px] text-white md:px-[100px]">
+      <div
+        className={`mb-5 text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+      >
         <h2 className="mb-4 font-serif text-4xl text-white md:text-[48px]">
           ChessLearnの特徴
         </h2>
@@ -33,10 +41,15 @@ export default function FeaturesSection() {
         </p>
       </div>
       <div className="mt-15 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
-        {features.map((f) => (
+        {features.map((f, i) => (
           <div
             key={f.title}
             className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm transition-transform hover:-translate-y-1 hover:bg-white/10"
+            style={{
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? "translateY(0)" : "translateY(24px)",
+              transition: `opacity 0.6s ease-out ${0.2 + i * 0.12}s, transform 0.6s ease-out ${0.2 + i * 0.12}s`,
+            }}
           >
             <i
               className={`${f.icon} mb-5 inline-block text-[40px] text-icon-blue`}

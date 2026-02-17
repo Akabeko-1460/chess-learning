@@ -15,9 +15,9 @@ const pieces = [
 
 export default function PromotionDialog({ color, onSelect, onCancel }: PromotionDialogProps) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" onClick={onCancel}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 animate-[fade-in_0.2s_ease-out]" onClick={onCancel}>
       <div
-        className="rounded-xl bg-white p-6 shadow-2xl"
+        className="rounded-xl bg-white p-6 shadow-2xl animate-[scale-in_0.3s_ease-out]"
         onClick={(e) => e.stopPropagation()}
       >
         <h3 className="mb-4 text-center text-lg font-bold text-navy">プロモーション</h3>

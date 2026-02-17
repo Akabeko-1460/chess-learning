@@ -4,18 +4,26 @@ export default function HeroSection() {
   return (
     <section className="relative flex w-full flex-col items-center justify-between overflow-hidden bg-gradient-to-br from-[#F0F4F8] to-white px-6 py-20 md:flex-row md:px-[100px] md:py-0 md:h-[800px]">
       <div className="z-10 w-full md:w-[45%]">
-        <div className="mb-6 inline-block rounded-full bg-light-blue-bg px-4 py-2 text-sm font-bold tracking-wider text-light-blue-text uppercase">
+        <div
+          className="mb-6 inline-block rounded-full bg-light-blue-bg px-4 py-2 text-sm font-bold tracking-wider text-light-blue-text uppercase opacity-0 animate-[fade-in-up_0.6s_ease-out_forwards]"
+        >
           初心者向け
         </div>
-        <h1 className="mb-6 font-serif text-5xl leading-tight text-navy md:text-7xl md:leading-[1.1]">
+        <h1
+          className="mb-6 font-serif text-5xl leading-tight text-navy md:text-7xl md:leading-[1.1] opacity-0 animate-[fade-in-up_0.6s_ease-out_0.15s_forwards]"
+        >
           チェスを
           <br />
           ステップバイステップで学ぼう
         </h1>
-        <p className="mb-10 max-w-[80%] text-xl text-text-secondary">
+        <p
+          className="mb-10 max-w-[80%] text-xl text-text-secondary opacity-0 animate-[fade-in-up_0.6s_ease-out_0.3s_forwards]"
+        >
           インタラクティブなレッスンでルール、戦略を楽しく学べます。
         </p>
-        <div className="flex flex-wrap gap-5">
+        <div
+          className="flex flex-wrap gap-5 opacity-0 animate-[fade-in-up_0.6s_ease-out_0.45s_forwards]"
+        >
           <Link
             href="/tutorial"
             className="rounded-md bg-navy px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-navy-light"
@@ -31,7 +39,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative mt-16 flex h-[500px] w-full items-center justify-center md:mt-0 md:w-[50%]">
+      <div className="relative mt-16 flex h-[500px] w-full items-center justify-center md:mt-0 md:w-[50%] opacity-0 animate-[fade-in_0.8s_ease-out_0.3s_forwards]">
         {/* Abstract chess board */}
         <div className="grid h-[350px] w-[350px] grid-cols-4 grid-rows-4 overflow-hidden rounded-[20px] bg-white shadow-[20px_20px_60px_rgba(0,0,0,0.1)] [transform:rotate(-15deg)_skewX(10deg)] md:h-[500px] md:w-[500px]">
           <div className="bg-light-gray" />
